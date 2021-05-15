@@ -25,9 +25,9 @@ const randomIntegerFromInterval = (min, max) => {
 
 const bgcChangeStart = () => {
   refs.startBtn.disabled = true;
-  document.body.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length)];
+  document.body.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length-1)];
   intervalId = setInterval(() => {
-    document.body.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length)];
+    document.body.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length-1)];
   }, 1000);
 };
 
